@@ -1,19 +1,18 @@
-# productCatalog
-spring boot application 'product catalog' for job opportunity in compassouol
-# Product Name
+# Product Catalog
 > A simple product catalog. This version does not require authentication.
 
 In this microservice it is possible to create, change, view and delete a specific product, in addition to viewing the list of current available products. It is also possible to search for products by filtering by * name, description and price *.
 
 The format of a product is as follows:
 
-`` javascript
+``` javascript
    {
      "id": "string",
      "name": "string",
      "description": "string",
      "price": 1.00
    } 
+```
 
 ![](swagger-sample.png)
 
@@ -22,7 +21,7 @@ The format of a product is as follows:
 Windows, OS X & Linux:
 
 ```sh
-cd .\back-java-version\productCatalog\
+cd ./back-java-version/productCatalog
 mvn spring-boot:run
 ```
 
