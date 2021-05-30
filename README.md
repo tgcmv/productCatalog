@@ -1,6 +1,6 @@
 # productCatalog
 spring boot application 'product catalog' for job opportunity in compassouol
-# Product Name
+# Product Catalog
 > A simple product catalog. This version does not require authentication.
 
 In this microservice it is possible to create, change, view and delete a specific product, in addition to viewing the list of current available products. It is also possible to search for products by filtering by * name, description and price *.
