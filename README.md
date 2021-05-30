@@ -15,8 +15,9 @@ The format of a product is as follows:
 ```
 
 ![](swagger-sample.png)
+![](front-sample.png)
 
-## Running
+## Running backend microservice
 
 Windows, OS X & Linux:
 
@@ -24,8 +25,19 @@ Windows, OS X & Linux:
 cd ./back-java-version/productCatalog
 mvn spring-boot:run
 ```
+Navigate to `http://localhost:9999/swagger-ui/index.html` if opened is every ok
 
-After try open http://localhost:9999/swagger-ui/index.html
+## Install and running frontend
+
+Windows, OS X & Linux:
+
+```sh
+cd ./front-angular/prouctCatalog-front
+npm install
+npm start
+```
+Navigate to `http://localhost:4200/` if opened is every ok
+
 
 ## Usage example
 
