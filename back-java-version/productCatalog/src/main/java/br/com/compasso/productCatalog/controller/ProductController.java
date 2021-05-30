@@ -43,7 +43,7 @@ public class ProductController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<ProductDTO> update(@PathVariable(required = true) final Long id,
+	public ResponseEntity<ProductDTO> update(@PathVariable(required = true) final String id,
 			@RequestBody @Valid final ProductDTO productDTO) {
 		Product product;
 		try {
@@ -56,7 +56,7 @@ public class ProductController {
 
 	@GetMapping("/{id}")
 	@ResponseStatus(HttpStatus.OK)
-	public ResponseEntity<ProductDTO> get(@PathVariable(required = true) final Long id) {
+	public ResponseEntity<ProductDTO> get(@PathVariable(required = true) final String id) {
 		Optional<Product> product = service.findById(id);
 		return product.isPresent() ? ResponseEntity.ok(new ProductDTO(product.get())) :  ResponseEntity.notFound().build();
 	}
@@ -76,7 +76,7 @@ public class ProductController {
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<?> delete(@PathVariable(required = true) final Long id) {
+	public ResponseEntity<?> delete(@PathVariable(required = true) final String id) {
 		try {
 			service.delete(id);
 			return ResponseEntity.ok().build();

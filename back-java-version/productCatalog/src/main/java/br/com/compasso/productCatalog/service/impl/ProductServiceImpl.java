@@ -36,7 +36,7 @@ public class ProductServiceImpl implements IProductService {
 	}
 
 	@Override
-	public Optional<Product> findById(Long id) {
+	public Optional<Product> findById(String id) {
 		return repository.findById(id);
 	}
 
@@ -46,14 +46,14 @@ public class ProductServiceImpl implements IProductService {
 	}
 
 	@Override
-	public Product update(Long id, Product product) throws NotFoundException {
+	public Product update(String id, Product product) throws NotFoundException {
 		repository.findById(id).orElseThrow(() -> new NotFoundException("product not found"));
 		product.setId(id);
 		return repository.save(product);
 	}
 
 	@Override
-	public void delete(Long id) throws NotFoundException {
+	public void delete(String id) throws NotFoundException {
 		repository.findById(id).orElseThrow(() -> new NotFoundException("product not found"));
 		repository.deleteById(id);
 	}

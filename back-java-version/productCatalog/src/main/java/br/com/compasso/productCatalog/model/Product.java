@@ -5,8 +5,9 @@ import java.math.BigDecimal;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,8 +29,9 @@ import lombok.ToString;
 @Entity
 public class Product {
 	
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id; //TODO trocar id por string. gerar uuid
+	@Id @GeneratedValue(generator="system-uuid")
+	@GenericGenerator(name="system-uuid", strategy = "uuid")
+	private String id;
 		
 	@Column
 	private String name;

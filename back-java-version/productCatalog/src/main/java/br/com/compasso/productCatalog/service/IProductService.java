@@ -6,7 +6,7 @@ import java.util.Optional;
 
 import br.com.compasso.productCatalog.model.Product;
 
-public interface IProductService extends IReaderService<Long, Product>, IWriterService<Long, Product>{
+public interface IProductService extends IReaderService<String, Product>, IWriterService<String, Product>{
 
 	public Collection<Product> filter(Optional<String> description, Optional<BigDecimal> minPrice, Optional<BigDecimal> maxPrice);
 }

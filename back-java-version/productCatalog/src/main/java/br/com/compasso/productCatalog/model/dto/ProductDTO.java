@@ -1,5 +1,6 @@
 package br.com.compasso.productCatalog.model.dto;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import javax.validation.constraints.Min;
@@ -18,10 +19,11 @@ import lombok.Setter;
 @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
-public class ProductDTO {
+public class ProductDTO implements Serializable {
 	
-	@Min(0)
-	private Long id;
+	private static final long serialVersionUID = -8802512413689790338L;
+
+	private String id;
 	
 	@NotBlank
 	private String name;
