@@ -12,7 +12,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
 @OpenAPIDefinition(
 		  info = @Info(
 				  title = "Product catalog",
-				  version = "0.0.1",
+				  version = "0.0.2",
 				  description = "spring boot application 'product catalog' for job opportunity in compassouol (<a>https://compassouol.com</a>)",
 				  contact = @Contact(
 				    name = "Thiago Carvalho", 
