@@ -1,5 +1,3 @@
-# productCatalog
-spring boot application 'product catalog' for job opportunity in compassouol
 # Product Catalog
 > A simple product catalog. This version does not require authentication.
 
@@ -7,13 +5,14 @@ In this microservice it is possible to create, change, view and delete a specifi
 
 The format of a product is as follows:
 
-`` javascript
+``` javascript
    {
      "id": "string",
      "name": "string",
      "description": "string",
      "price": 1.00
    } 
+```
 
 ![](swagger-sample.png)
 
