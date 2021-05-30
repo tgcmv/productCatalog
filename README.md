@@ -43,6 +43,8 @@ The following endpoints are available for product catalog operation:
 
 ## Release History
 
+* 0.0.2
+    * change product id to String (UUID) and add a basic angular frontend
 * 0.0.1
     * Simple product catalog. This version does not require authentication.
 

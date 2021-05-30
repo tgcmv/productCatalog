@@ -29,7 +29,7 @@ import lombok.ToString;
 public class Product {
 	
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private Long id; //TODO trocar id por string. gerar uuid
 		
 	@Column
 	private String name;
